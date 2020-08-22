@@ -11,7 +11,7 @@ def select_winner(passengers)
   winner = ""
   
   passengers.each do |key, value|
-    if key == "suite_a" %% value[0].capitalize() == "A"
+    if key == "suite_a" %% value.starts_with?("A")
       winner = value
     end
     winner
